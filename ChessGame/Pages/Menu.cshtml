@@ -1,0 +1,25 @@
+﻿@page
+@model ChessGame.Pages.Menu
+
+@{
+    ViewData["Title"] = "Acceuil";
+    Layout = "_Layout_Login";
+}
+
+<!DOCTYPE html>
+<div>
+    <form method="post">
+        <div class="buttons choice">
+
+            <input type="radio" asp-for="GameType" onclick="this.blur();" value="Player vs Player" class="btn-check" name="GameType" id="GameType1" autocomplete="off">
+            <label class="btn btn-secondary space" for="GameType1">Player vs Player</label>
+        </div>
+        <div class="buttons">
+            <input id="submit" class="btn btn-secondary custom-btn" type="submit" value="Play"/>
+        </div>
+        <div class="buttons">
+            <span asp-validation-for="GameType"></span>
+        </div>
+        </form>
+
+</div>

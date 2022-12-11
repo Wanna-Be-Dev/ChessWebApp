@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Firebase.Auth" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Owin.Security" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Owin.Security.Cookies" Version="4.2.0" />
+    <PackageReference Include="Npgsql" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\Register.cshtml.css">
+      <DependentUpon>Register.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Index.cshtml.css">
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Login.cshtml.css">
+      <DependentUpon>Login.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Test.cshtml.css">
+      <DependentUpon>Test.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Chess.cshtml.css">
+      <DependentUpon>Chess.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Menu.cshtml.css">
+      <DependentUpon>Menu.cshtml</DependentUpon>
+    </None>
+    <None Update="Pages\Shared\_Layout_Login.cshtml.css">
+      <DependentUpon>_Layout_Login.cshtml</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Register.cshtml.css">
+      <DependentUpon>Register.cshtml</DependentUpon>
+    </Content>
+    <Content Update="Pages\Shared\_LayoutdLogin.cshtml.css">
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Content>
+    <Content Include="Backend\Users" />
+    <Content Update="Pages\Shared\_Layout_Not_Login.cshtml.css">
+      <DependentUpon>_Layout2.cshtml</DependentUpon>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\Backend\Users" />
+  </ItemGroup>
+
+</Project>

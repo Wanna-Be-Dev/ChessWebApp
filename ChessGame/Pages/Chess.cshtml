@@ -1,0 +1,348 @@
+﻿@page
+@model ChessModel
+@{
+    Layout = "_Layout_Login";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>ChessGame</title>
+</head>
+<body>
+<table id="board" class="chess-board">
+    <tbody>
+    <tr>
+        <th></th>
+        <th>a</th>
+        <th>b</th>
+        <th>c</th>
+        <th>d</th>
+        <th>e</th>
+        <th>f</th>
+        <th>g</th>
+        <th>h</th>
+    </tr>
+    <tr>
+        <th>8</th>
+        <td class="light" id="56" ><img draggable="false" src="Images/ChessPieces/BlackRook.svg" alt="BlackRook"></td>
+        <td class="dark" id="57" ><img draggable="false" src="Images/ChessPieces/BlackKnight.svg" alt="BlackKnight"></td>
+        <td class="light" id="58" ><img draggable="false" src="Images/ChessPieces/BlackBishop.svg" alt="BlackBishop"></td>
+        <td class="dark" id="59" ><img draggable="false" src="Images/ChessPieces/BlackQueen.svg" alt="BlackQueen"></td>
+        <td class="light" id="60" ><img draggable="false" src="Images/ChessPieces/BlackKing.svg" alt="BlackKing"></td>
+        <td class="dark" id="61" ><img draggable="false" src="Images/ChessPieces/BlackBishop.svg" alt="BlackBishop"></td>
+        <td class="light" id="62" ><img draggable="false" src="Images/ChessPieces/BlackKnight.svg" alt="BlackKnight"></td>
+        <td class="dark" id="63" ><img draggable="false" src="Images/ChessPieces/BlackRook.svg" alt="BlackRook"></td>
+    </tr>
+    <tr>
+        <th>7</th>
+        <td class="dark" id="48" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="light" id="49" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="dark" id="50" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="light" id="51" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="dark" id="52" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="light" id="53" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="dark" id="54" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+        <td class="light" id="55" ><img draggable="false" src="Images/ChessPieces/BlackPawn.svg" alt="BlackPawn"></td>
+    </tr>
+    <tr>
+        <th>6</th>
+        <td class="light" id="40" ></td>
+        <td class="dark" id="41" ></td>
+        <td class="light" id="42" ></td>
+        <td class="dark" id="43" ></td>
+        <td class="light" id="44" ></td>
+        <td class="dark" id="45" ></td>
+        <td class="light" id="46" ></td>
+        <td class="dark" id="47" ></td>
+    </tr>
+    <tr>
+        <th>5</th>
+        <td class="dark" id="32" ></td>
+        <td class="light" id="33" ></td>
+        <td class="dark" id="34" ></td>
+        <td class="light" id="35" ></td>
+        <td class="dark" id="36" ></td>
+        <td class="light" id="37" ></td>
+        <td class="dark" id="38" ></td>
+        <td class="light" id="39" ></td>
+    </tr>
+    <tr>
+        <th>4</th>
+        <td class="light" id="24" ></td>
+        <td class="dark" id="25" ></td>
+        <td class="light" id="26" ></td>
+        <td class="dark" id="27" ></td>
+        <td class="light" id="28" ></td>
+        <td class="dark" id="29" ></td>
+        <td class="light" id="30" ></td>
+        <td class="dark" id="31" ></td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td class="dark" id="16" ></td>
+        <td class="light" id="17" ></td>
+        <td class="dark" id="18" ></td>
+        <td class="light" id="19" ></td>
+        <td class="dark" id="20" ></td>
+        <td class="light" id="21" ></td>
+        <td class="dark" id="22" ></td>
+        <td class="light" id="23" ></td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td class="light" id="8" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="dark" id="9" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="light" id="10" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="dark" id="11" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="light" id="12" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="dark" id="13" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="light" id="14" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+        <td class="dark" id="15" ><img draggable="false" src="Images/ChessPieces/WhitePawn.svg" alt="WhitePawn"></td>
+    </tr>
+    <tr>
+        <th>1</th>
+        <td class="dark" id="0" ><img draggable="false" src="Images/ChessPieces/WhiteRook.svg" alt="WhiteRook"></td>
+        <td class="light" id="1" ><img draggable="false" src="Images/ChessPieces/WhiteKnight.svg" alt="WhiteKnight"></td>
+        <td class="dark" id="2" ><img draggable="false" src="Images/ChessPieces/WhiteBishop.svg" alt="WhiteBishop"></td>
+        <td class="light" id="3" ><img draggable="false" src="Images/ChessPieces/WhiteQueen.svg" alt="WhiteQueen"></td>
+        <td class="dark" id="4" ><img draggable="false" src="Images/ChessPieces/WhiteKing.svg" alt="WhiteKing"></td>
+        <td class="light" id="5" ><img draggable="false" src="Images/ChessPieces/WhiteBishop.svg" alt="WhiteBishop"></td>
+        <td class="dark" id="6" ><img draggable="false" src="Images/ChessPieces/WhiteKnight.svg" alt="WhiteKnight"></td>
+        <td class="light" id="7" ><img draggable="false" src="Images/ChessPieces/WhiteRook.svg" alt="WhiteRook"></td>
+    </tr>
+    </tbody>
+</table>
+<button id="reset" class="reset btn btn-secondary custom-btn">Rematch</button>
+
+<!-- Small modal -->
+<div id="dialog-prom">
+   <table id="board" class="prom">
+           <tr>
+              <td><img draggable="false" src="Images/ChessPieces/WhiteQueen.svg" alt="Queen"></td>
+              <td><img draggable="false" src="Images/ChessPieces/WhiteRook.svg" alt="Rook"></td>
+           </tr>
+           <tr>
+               <td><img draggable="false" src="Images/ChessPieces/WhiteBishop.svg" alt="Bishop"></td>
+               <td><img draggable="false" src="Images/ChessPieces/WhiteKnight.svg" alt="Knight"></td>
+            </tr>
+   </table>
+</div>
+
+<div id="dialog-win-white" class="end-menu">
+<div  class="buttons">
+    <span class="text"><b>WHITE WON !</b></span>
+</div>
+<div class="buttons button">
+    <button class="reset btn btn-secondary custom-btn">Rematch</button>
+</div>
+</div>
+
+<div id="dialog-win-black" class="end-menu">
+    <div class="buttons">
+        <span class="text"><b>BLACK WON !</b></span> 
+    </div> 
+    <div class="buttons button">
+        <button class="reset btn btn-secondary custom-btn">Rematch</button>
+    </div>
+</div>
+
+<div id="dialog-draw" class="end-menu">
+    <div  class="buttons">
+        <span>DRAW</span> 
+    </div>
+    <div class="buttons button">
+        <button class="reset btn btn-secondary custom-btn">Rematch</button>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+.ui-dialog-titlebar {display:none}
+.ui-dialog .ui-dialog-content {
+	background: #fafafa;
+}
+.ui-widget-overlay {
+	background: #666666;
+	opacity: 0;
+}
+</style>
+
+<script type="text/javascript">
+
+setInterval(function(){ 
+    $.ajax({
+    url: '/Chess',
+    type: "POST",
+    data: { 
+        __RequestVerificationToken: $('@Html.AntiForgeryToken()').val(),
+    },
+    success: function (result)
+    {
+       if(result) {
+           const resultStr = JSON.parse(result);
+           const moves = resultStr.moves;
+           const whiteProm = resultStr.whitePromote;
+           const blackProm = resultStr.blackPromote;
+            playMoves(moves);   
+            if (whiteProm === "true") {
+               const end = document.getElementById(moves[0].EndPosition);
+               end.firstChild.src = "Images/ChessPieces/WhiteQueen.svg";
+               end.firstChild.alt = "WhiteQueen";
+            }
+            if (blackProm === "true") {
+                const end = document.getElementById(moves[0].EndPosition);
+                end.firstChild.src = "Images/ChessPieces/BlackQueen.svg";
+                end.firstChild.alt = "BlackQueen";
+            }
+            CheckEnd(resultStr.end);
+       } 
+    }
+    });  
+}, 2000);
+
+let lastMove;
+
+const timer = ms => new Promise(res => setTimeout(res, ms))
+
+const tbody = document.querySelector('#board tbody');
+tbody.addEventListener('click', function (e) {
+  const cell = e.target.closest('td');
+  if (!cell) {return;} 
+  $.ajax({
+           url: '/Chess',
+           type: "POST",
+           data: { 
+                __RequestVerificationToken: $('@Html.AntiForgeryToken()').val(),
+                data : cell.id + " " + (cell.children[0] === undefined ? "None" : cell.children[0].alt)
+           },
+           success: function (result)
+           {
+               const elems = document.getElementsByClassName("selectedPiece");
+               while(elems.length > 0) {
+                    elems[0].classList.remove("selectedPiece");
+               }
+               if(result) {
+                   const resultStr = JSON.parse(result);
+                   const playerMoves = resultStr.playerMoves;
+                   const AImoves = resultStr.AImoves;
+                   const whiteProm = resultStr.whitePromote;
+                   const blackProm = resultStr.blackPromote;
+                   const select = resultStr.select;
+                   if (select === "true") {
+                        playerMoves.forEach(move => document.getElementById(move.EndPosition).classList.add("selectedPiece"));
+                   } else {
+                        playMoves(playerMoves);   
+                        if (whiteProm === "true") {
+                            $( "#dialog-prom" ).dialog( "open" );
+                            lastMove = playerMoves[0].EndPosition;
+                        }
+                        setTimeout(() => playMoves(AImoves), 750);
+                        if (blackProm === "true") {
+                            const end = document.getElementById(AImoves[0].EndPosition);
+                            end.firstChild.src = "Images/ChessPieces/BlackQueen.svg";
+                            end.firstChild.alt = "BlackQueen";
+                        }
+                   } 
+                   CheckEnd(resultStr.end);
+               } 
+           }
+      });
+});
+
+function playMoves(moves) {
+    for (const move of moves) {
+        const end = document.getElementById(move.EndPosition);
+        const eaten = document.getElementById(move.EatenPiece.Position);
+        const start = document.getElementById(move.StartPosition);
+        const piece = start.removeChild(start.children[0]);
+        if (eaten.children[0] !== undefined) {
+            eaten.removeChild(eaten.children[0]);
+        }
+        end.appendChild(piece);  
+    }
+}
+
+$(function() {
+      $( "#dialog-prom" ).dialog({
+         autoOpen: false,
+         maxWidth:125,
+         maxHeight: 125,
+         width: 125,
+         height: 125,
+         modal: true,
+         resizable: false,
+      });
+   });
+
+$(function() {
+      $( ".end-menu" ).dialog({
+         autoOpen: false,
+         maxWidth:300,
+         maxHeight: 200,
+         width: 300,
+         height: 200,
+         modal: true,
+         resizable: false,
+      });
+   });
+
+$( ".reset" ).click(function() {
+    window.location.reload();
+});
+
+const tbodyProm = document.querySelector('#dialog-prom tbody');
+tbodyProm.addEventListener('click', function (e) {
+  const cell = e.target.closest('td');
+  if (!cell) {return;} 
+  $.ajax({
+     url: '/Chess',
+     type: "POST",
+     data: { 
+          __RequestVerificationToken: $('@Html.AntiForgeryToken()').val(),
+          data : cell.children[0].alt
+     },
+     success: function (result) {
+         const resultStr = JSON.parse(result);
+         const piece = document.getElementById(lastMove);
+         switch (resultStr.type) {
+             case "Queen":
+                 piece.firstChild.src = "Images/ChessPieces/WhiteQueen.svg";
+                 piece.firstChild.alt = "WhiteQueen";
+                 break;
+             case "Rook":
+                  piece.firstChild.src = "Images/ChessPieces/WhiteRook.svg";
+                  piece.firstChild.alt = "WhiteRook";
+                  break;
+             case "Bishop":
+                   piece.firstChild.src = "Images/ChessPieces/WhiteBishop.svg";
+                   piece.firstChild.alt = "WhiteBishop";
+                   break;
+             case "Knight":
+                    piece.firstChild.src = "Images/ChessPieces/WhiteKnight.svg";
+                    piece.firstChild.alt = "WhiteKnight";
+                    break;
+     }
+       $( "#dialog-prom" ).dialog( "close" );
+     }
+  });
+ });
+
+function CheckEnd(end) {
+    switch (end) {
+        case "white":
+            $( "#dialog-win-white" ).dialog( "open" );
+            break;
+        case "black":
+            $( "#dialog-win-black" ).dialog( "open" );
+            break;
+        case "draw":
+            $( "#dialog-draw" ).dialog( "open" );
+            break;
+        case "no":
+            break;
+    }
+}
+</script>

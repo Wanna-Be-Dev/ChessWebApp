@@ -1,0 +1,25 @@
+.btn-secondary.custom-btn {
+    background-color: #094909;
+}
+.btn-secondary {
+    width: 15%;
+}
+.buttons 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space {
+    margin: 10px;
+}
+
+.choice {
+    margin-top: 4%;
+}
+
+#submit {
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
